@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "BKS",
+        "underlyingSymbol": "BKS",
+        "uuid": "be149a99-1e19-3d99-8e53-6836e9409729",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

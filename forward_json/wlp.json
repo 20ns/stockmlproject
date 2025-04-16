@@ -1,0 +1,15 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "WLP",
+        "underlyingSymbol": "WLP",
+        "shortName": "1768673",
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "48dc1bf6-da0a-3d21-81ea-8a1f5872da13",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

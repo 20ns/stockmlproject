@@ -1,0 +1,15 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "DPS",
+        "underlyingSymbol": "DPS",
+        "longName": "Dr Pepper Snapple Group, Inc.",
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "809402c7-728d-3625-9af8-7ec079b2c599",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "CTXS",
+        "underlyingSymbol": "CTXS",
+        "uuid": "2a2113bf-2c4e-3ae7-a455-27e94f21ccc7",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

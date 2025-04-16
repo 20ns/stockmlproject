@@ -1,0 +1,15 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "BCR",
+        "underlyingSymbol": "BCR",
+        "shortName": "574456",
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "40116901-e9d5-3666-a539-284681835db4",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

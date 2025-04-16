@@ -1,0 +1,15 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "GMCR",
+        "underlyingSymbol": "GMCR",
+        "shortName": "26885",
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "08f0b2dc-df6e-3ac5-a774-2b11f7d213af",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

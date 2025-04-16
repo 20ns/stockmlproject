@@ -1,0 +1,14 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "LO",
+        "underlyingSymbol": "LO",
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "31d38ecd-194a-3ab6-a058-4e14314036af",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

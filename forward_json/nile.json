@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "NILE",
+        "underlyingSymbol": "NILE",
+        "uuid": "7fd65b84-a3fb-3167-bd6d-9bb48571517c",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

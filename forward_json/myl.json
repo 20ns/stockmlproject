@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "MYL",
+        "underlyingSymbol": "MYL",
+        "uuid": "af02bec5-077b-3709-98e6-0b880d5cd784",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

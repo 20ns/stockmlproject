@@ -1,0 +1,11 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "COG",
+        "underlyingSymbol": "COG",
+        "uuid": "3d71f062-cb40-3b71-b0d8-04a1f489e1b0",
+        "messageBoardId": "finmb_258181",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

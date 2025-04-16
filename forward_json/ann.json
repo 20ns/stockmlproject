@@ -1,0 +1,15 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "ANN",
+        "underlyingSymbol": "ANN",
+        "shortName": "1263074",
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "eaf18b48-4527-3537-921e-e265122c7e16",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

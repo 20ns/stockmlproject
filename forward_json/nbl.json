@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "NBL",
+        "underlyingSymbol": "NBL",
+        "uuid": "ef6d7951-628b-31bf-a847-1a09ca891f41",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

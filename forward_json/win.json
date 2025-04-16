@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "WIN",
+        "underlyingSymbol": "WIN",
+        "uuid": "92e56d81-95a9-3d45-a9b9-0aacf82886b1",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

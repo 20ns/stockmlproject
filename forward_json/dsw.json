@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "DSW",
+        "underlyingSymbol": "DSW",
+        "uuid": "2513e8de-c1da-315b-b6aa-32c7788ba4c9",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

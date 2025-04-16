@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "TMK",
+        "underlyingSymbol": "TMK",
+        "uuid": "99629228-aa96-32e4-98f4-41e9a06ca605",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

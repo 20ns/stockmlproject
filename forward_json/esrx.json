@@ -1,0 +1,17 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "ESRX",
+        "underlyingSymbol": "ESRX",
+        "shortName": "1072321",
+        "longName": "Express Scripts Holding Company",
+        "firstTradeDateEpochUtc": 708096600,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "190a5fc9-72e0-3a70-9870-371fddc40fa5",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

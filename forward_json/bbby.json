@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "BBBY",
+        "underlyingSymbol": "BBBY",
+        "uuid": "67996b20-0f23-3d7e-8863-5d4ac8d3e532",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

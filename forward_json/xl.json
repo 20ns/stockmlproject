@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "XL",
+        "underlyingSymbol": "XL",
+        "uuid": "a7a4ccc5-e1a0-38d8-bf49-65e014329201",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

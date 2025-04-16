@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "AVP",
+        "underlyingSymbol": "AVP",
+        "uuid": "75369766-cca1-36b6-9524-a0829771ab62",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

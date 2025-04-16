@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "PBCT",
+        "underlyingSymbol": "PBCT",
+        "uuid": "34d4a8a2-177a-3ab6-a086-1fe33853aa85",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

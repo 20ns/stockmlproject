@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "MOLX",
+        "underlyingSymbol": "MOLX",
+        "shortName": "655556",
+        "firstTradeDateEpochUtc": 94833000,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "15c1620f-2f81-30a4-9fe0-31058c6c5bf2",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

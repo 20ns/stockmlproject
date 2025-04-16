@@ -1,0 +1,3 @@
+# Ignore fetched data and JSON files
+/Fetched Data/
+/forward_json/

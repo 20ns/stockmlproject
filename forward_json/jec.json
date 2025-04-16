@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "JEC",
+        "underlyingSymbol": "JEC",
+        "uuid": "ec41500a-7294-3d53-83d5-fd85f4164add",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

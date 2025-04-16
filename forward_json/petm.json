@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "PETM",
+        "underlyingSymbol": "PETM",
+        "shortName": "1824860",
+        "firstTradeDateEpochUtc": 1524576600,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "04dc15ad-10a7-3488-9672-4859bdb7b621",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

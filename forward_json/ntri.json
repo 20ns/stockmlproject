@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "NTRI",
+        "underlyingSymbol": "NTRI",
+        "uuid": "6e022c18-6a2b-3e5b-8712-eb34d461f0fd",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

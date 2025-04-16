@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "BHI",
+        "underlyingSymbol": "BHI",
+        "shortName": "3295497",
+        "firstTradeDateEpochUtc": 1535463000,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "f05c55e9-3dd9-34f7-b536-7ec5ccfaab6c",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

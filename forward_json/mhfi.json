@@ -1,0 +1,15 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "MHFI",
+        "underlyingSymbol": "MHFI",
+        "shortName": "McGraw Hill Financial, Inc.",
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "32226ddd-677e-3f3f-b9f9-2bd2d7cfc1ba",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

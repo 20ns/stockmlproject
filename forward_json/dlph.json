@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "DLPH",
+        "underlyingSymbol": "DLPH",
+        "uuid": "3c53f348-bf5b-39d8-8601-cf4d34b7cea9",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

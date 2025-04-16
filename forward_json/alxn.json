@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "ALXN",
+        "underlyingSymbol": "ALXN",
+        "uuid": "6f717d54-9576-39b0-9102-beae1b53259f",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

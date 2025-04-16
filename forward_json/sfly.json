@@ -1,0 +1,12 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "SFLY",
+        "underlyingSymbol": "SFLY",
+        "longName": "Shutterfly, Inc.",
+        "uuid": "ea72e3ab-801d-3016-92b5-331aa00bdecf",
+        "messageBoardId": "finmb_91825",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

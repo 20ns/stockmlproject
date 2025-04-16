@@ -1,0 +1,11 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "TSS",
+        "underlyingSymbol": "TSS",
+        "uuid": "877b1540-498b-3253-859c-debf2274ec8d",
+        "messageBoardId": "finmb_308973",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "PCP",
+        "underlyingSymbol": "PCP",
+        "shortName": "534994",
+        "firstTradeDateEpochUtc": 1521120600,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "118521da-c91c-3adb-aeb3-9eb130e63473",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

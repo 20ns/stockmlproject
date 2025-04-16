@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "GAS",
+        "underlyingSymbol": "GAS",
+        "shortName": "330431",
+        "firstTradeDateEpochUtc": 1337607000,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "505273a0-a2bb-3011-9a40-f6cccbc55d69",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

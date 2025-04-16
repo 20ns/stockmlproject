@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "MCP",
+        "underlyingSymbol": "MCP",
+        "shortName": "3007",
+        "firstTradeDateEpochUtc": 1266849000,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "aaad5def-9c90-3402-8bbd-ba28e341feb7",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

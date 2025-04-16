@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "ACE",
+        "underlyingSymbol": "ACE",
+        "shortName": "1280525",
+        "firstTradeDateEpochUtc": 1535463000,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "757f4749-aebb-3891-af5a-c2a9b5439cea",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

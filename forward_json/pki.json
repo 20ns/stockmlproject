@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "PKI",
+        "underlyingSymbol": "PKI",
+        "uuid": "06f161d2-6fcf-302d-8fcb-91bb4a89fc18",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

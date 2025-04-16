@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "LM",
+        "underlyingSymbol": "LM",
+        "uuid": "dfd5b430-bc4d-32c2-836d-0227ad9ac0c4",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

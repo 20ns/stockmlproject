@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "ETFC",
+        "underlyingSymbol": "ETFC",
+        "uuid": "79cae6de-f07b-3a35-8f81-1b7c1ae98c09",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

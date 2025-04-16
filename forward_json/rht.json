@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "RHT",
+        "underlyingSymbol": "RHT",
+        "uuid": "fe3096e4-49e2-330e-a28d-630e0c7f2376",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "CAB",
+        "underlyingSymbol": "CAB",
+        "shortName": "292838",
+        "firstTradeDateEpochUtc": 1555335000,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "ac4a6b38-5d74-392d-8510-0caab953c132",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

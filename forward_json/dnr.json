@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "DNR",
+        "underlyingSymbol": "DNR",
+        "uuid": "2c16c98d-9622-3ed8-b8cc-1e7a5934ec5a",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

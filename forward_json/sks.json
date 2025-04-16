@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "SKS",
+        "underlyingSymbol": "SKS",
+        "shortName": "1868671",
+        "firstTradeDateEpochUtc": 549725400,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "8e021ce2-3a05-35e3-b1d8-ae3daa2d8bfd",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "ESV",
+        "underlyingSymbol": "ESV",
+        "uuid": "bc78a8d1-62c6-35dc-ab05-494d5e34a71e",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

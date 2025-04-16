@@ -1,0 +1,17 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "AET",
+        "underlyingSymbol": "AET",
+        "shortName": "2046029",
+        "longName": "Aetna Inc.",
+        "firstTradeDateEpochUtc": 818951400,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "be9e8a0c-905c-3179-baf5-595088db5ef3",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "MON",
+        "underlyingSymbol": "MON",
+        "uuid": "b8a17e84-3900-3d17-94cd-35a7793e0824",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

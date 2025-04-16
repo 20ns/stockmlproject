@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "HAR",
+        "underlyingSymbol": "HAR",
+        "shortName": "906601",
+        "firstTradeDateEpochUtc": 1358433000,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "b5f8bb8f-41e6-3c12-82c3-d745716f587b",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

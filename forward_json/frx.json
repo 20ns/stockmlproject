@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "FRX",
+        "underlyingSymbol": "FRX",
+        "uuid": "a152ef1e-4a8f-3bd4-ac67-cc924b1172ac",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "ZNGA",
+        "underlyingSymbol": "ZNGA",
+        "uuid": "c7dcb9ef-d1b9-36ae-bf16-7fe92d7fb55e",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

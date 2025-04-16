@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "KSU",
+        "underlyingSymbol": "KSU",
+        "uuid": "509520d4-1b9a-3bc9-848f-7a9e393f6907",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

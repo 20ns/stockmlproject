@@ -1,0 +1,11 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "VAR",
+        "underlyingSymbol": "VAR",
+        "uuid": "d6f4440b-8633-3973-933c-78928bdac2e1",
+        "messageBoardId": "finmb_311907",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

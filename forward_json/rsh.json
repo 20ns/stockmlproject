@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "RSH",
+        "underlyingSymbol": "RSH",
+        "shortName": "1664541",
+        "firstTradeDateEpochUtc": 1198852200,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "f8e8898e-2cf4-3219-9266-51784e996358",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

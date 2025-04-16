@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "WPX",
+        "underlyingSymbol": "WPX",
+        "uuid": "0ff860a6-9397-3cb9-95e8-92cca17fa611",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

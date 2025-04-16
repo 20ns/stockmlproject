@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "UTX",
+        "underlyingSymbol": "UTX",
+        "uuid": "619c5759-3640-3fc5-a035-d78fa9e8ea3c",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

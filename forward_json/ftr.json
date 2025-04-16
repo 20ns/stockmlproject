@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "FTR",
+        "underlyingSymbol": "FTR",
+        "uuid": "a676d6b1-7afa-305e-af29-bcfe3242f7c3",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "ARG",
+        "underlyingSymbol": "ARG",
+        "shortName": "386692",
+        "firstTradeDateEpochUtc": 1558963800,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "10c7e31b-f64b-33ad-95cd-9c21c9a964cc",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

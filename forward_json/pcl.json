@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "PCL",
+        "underlyingSymbol": "PCL",
+        "shortName": "648505",
+        "firstTradeDateEpochUtc": 1183642200,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "f57280c8-2d3a-38f8-bf41-2a520e33f7fe",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

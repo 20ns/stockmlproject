@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "DISCA",
+        "underlyingSymbol": "DISCA",
+        "uuid": "09ec2f11-725f-3463-b6ff-96ace0509792",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "FB",
+        "underlyingSymbol": "FB",
+        "uuid": "30781f1f-c2f9-342c-ab1a-d2f6f35a51db",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

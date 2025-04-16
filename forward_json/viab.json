@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "VIAB",
+        "underlyingSymbol": "VIAB",
+        "uuid": "9fa21e7b-2d7e-37fe-aefd-4f95ce19b207",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

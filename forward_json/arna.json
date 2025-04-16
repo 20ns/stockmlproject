@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "ARNA",
+        "underlyingSymbol": "ARNA",
+        "uuid": "a1395b96-5953-378d-b9ca-cd2d9bea044b",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "COL",
+        "underlyingSymbol": "COL",
+        "shortName": "789776",
+        "longName": "Rockwell Collins, Inc.",
+        "firstTradeDateEpochUtc": 1163428200,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "a44a0658-75f5-366d-8147-4bb9bfb0ce05",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

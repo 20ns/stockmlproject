@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "SNE",
+        "underlyingSymbol": "SNE",
+        "uuid": "d635c84c-6cad-3d48-add2-a7c14e38f4b9",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "SNTS",
+        "underlyingSymbol": "SNTS",
+        "shortName": "176668",
+        "firstTradeDateEpochUtc": 1199284200,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "267fe082-8273-329e-b4e4-1d715409f8c4",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

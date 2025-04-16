@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "TIF",
+        "underlyingSymbol": "TIF",
+        "uuid": "94428806-80eb-3d7f-b60d-15f422004547",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

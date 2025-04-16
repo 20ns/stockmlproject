@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "AGN",
+        "underlyingSymbol": "AGN",
+        "uuid": "85c2d5c1-a770-3aaa-8b8b-6cc499404e04",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

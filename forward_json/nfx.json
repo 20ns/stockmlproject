@@ -1,0 +1,17 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "NFX",
+        "underlyingSymbol": "NFX",
+        "shortName": "781095",
+        "longName": "Newfield Exploration Company",
+        "firstTradeDateEpochUtc": 753114600,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "5b8fc740-582b-30a8-bed5-d55f590214b5",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

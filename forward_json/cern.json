@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "CERN",
+        "underlyingSymbol": "CERN",
+        "uuid": "350ae988-c85c-31a1-bc8c-c0d38f28d0ee",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

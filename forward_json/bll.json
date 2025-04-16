@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "BLL",
+        "underlyingSymbol": "BLL",
+        "uuid": "7e91afea-7f1a-3027-af44-04de74199ea3",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

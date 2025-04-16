@@ -1,0 +1,19 @@
+{
+    "statistics": {
+        "maxAge": 86400,
+        "priceHint": 2,
+        "exchange": "NAS",
+        "quoteType": "EQUITY",
+        "symbol": "NYX",
+        "underlyingSymbol": "NYX",
+        "shortName": "NYIAX, Inc. Common Stock",
+        "longName": "NYIAX, Inc. Common Stock",
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "0311d5b8-c4df-3246-ae6f-f8306a98b98c",
+        "gmtOffSetMilliseconds": -14400000,
+        "recommendationKey": "none",
+        "grossProfits": -212947,
+        "trailingPegRatio": null
+    }
+}

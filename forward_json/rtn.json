@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "RTN",
+        "underlyingSymbol": "RTN",
+        "uuid": "df5532b1-53d7-3557-a194-31440ebb8312",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "SYMC",
+        "underlyingSymbol": "SYMC",
+        "uuid": "27d334bb-f946-353d-a941-d977cf86c988",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

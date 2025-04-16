@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "RDC",
+        "underlyingSymbol": "RDC",
+        "uuid": "daabf936-cb8e-3325-a515-fc1817afad1b",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

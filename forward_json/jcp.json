@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "JCP",
+        "underlyingSymbol": "JCP",
+        "uuid": "0440a8c5-fef1-3bb1-a12a-537612cef9e8",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

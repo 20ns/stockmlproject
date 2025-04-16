@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "TWX",
+        "underlyingSymbol": "TWX",
+        "shortName": "17007297",
+        "firstTradeDateEpochUtc": 701015400,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "866599c0-db30-34ed-b63b-65aa85415c8b",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

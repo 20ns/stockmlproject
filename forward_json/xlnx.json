@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "XLNX",
+        "underlyingSymbol": "XLNX",
+        "uuid": "ac08a31b-4c1b-3bd5-8258-fa0a2afa17e2",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

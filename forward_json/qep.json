@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "QEP",
+        "underlyingSymbol": "QEP",
+        "uuid": "b5cc1119-33cf-38d0-8a78-79b819ad97da",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

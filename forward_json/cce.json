@@ -1,0 +1,17 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "CCE",
+        "underlyingSymbol": "CCE",
+        "shortName": "1353367",
+        "longName": "Coca-Cola European Partners plc",
+        "firstTradeDateEpochUtc": 1152192600,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "82580a81-e7ad-3261-b181-3ab744b009b9",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

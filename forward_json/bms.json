@@ -1,0 +1,21 @@
+{
+    "statistics": {
+        "maxAge": 86400,
+        "priceHint": 2,
+        "fiftyTwoWeekLow": 57.11,
+        "fiftyTwoWeekHigh": 58.88,
+        "exchange": "NYQ",
+        "quoteType": "EQUITY",
+        "symbol": "BMS",
+        "underlyingSymbol": "BMS",
+        "longName": "Bemis Company, Inc.",
+        "firstTradeDateEpochUtc": 76253400,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "f487fd6b-9731-3473-934e-bd8495c805d7",
+        "gmtOffSetMilliseconds": -14400000,
+        "recommendationKey": "none",
+        "grossProfits": 805100000,
+        "trailingPegRatio": null
+    }
+}

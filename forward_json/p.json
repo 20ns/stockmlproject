@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "P",
+        "underlyingSymbol": "P",
+        "longName": "Pandora Media, Inc.",
+        "firstTradeDateEpochUtc": 1308144600,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "44c29edb-103a-3872-b519-ad0c9a0fdaaa",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "HOT",
+        "underlyingSymbol": "HOT",
+        "shortName": "1659453",
+        "firstTradeDateEpochUtc": 1311255000,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "c429fde8-b1b9-36d4-af84-ba63dbfef6ac",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

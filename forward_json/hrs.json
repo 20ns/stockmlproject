@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "HRS",
+        "underlyingSymbol": "HRS",
+        "uuid": "8e2f5d23-316c-3f79-bc77-2cd7da195ec5",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

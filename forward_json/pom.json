@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "POM",
+        "underlyingSymbol": "POM",
+        "shortName": "574649",
+        "firstTradeDateEpochUtc": 1271770200,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "d4622f52-9e92-32e3-ab1a-f91ba9a32ef4",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "CSC",
+        "underlyingSymbol": "CSC",
+        "shortName": "1056883",
+        "firstTradeDateEpochUtc": 1204900200,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "4853aeb7-8ea5-3020-a44f-2d2615436dae",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

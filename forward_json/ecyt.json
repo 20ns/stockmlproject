@@ -1,0 +1,16 @@
+{
+    "statistics": {
+        "exchange": "YHD",
+        "quoteType": "MUTUALFUND",
+        "symbol": "ECYT",
+        "underlyingSymbol": "ECYT",
+        "longName": "Endocyte, Inc.",
+        "firstTradeDateEpochUtc": 1296829800,
+        "timeZoneFullName": "America/New_York",
+        "timeZoneShortName": "EDT",
+        "uuid": "d17f792f-5a7c-33c7-802f-1f3479570c8c",
+        "gmtOffSetMilliseconds": -14400000,
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}

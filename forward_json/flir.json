@@ -1,0 +1,10 @@
+{
+    "statistics": {
+        "quoteType": "NONE",
+        "symbol": "FLIR",
+        "underlyingSymbol": "FLIR",
+        "uuid": "3be573e3-f8e3-33bf-b4e1-40a993b63c28",
+        "maxAge": 86400,
+        "trailingPegRatio": null
+    }
+}
