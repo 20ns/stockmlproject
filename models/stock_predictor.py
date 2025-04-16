@@ -15,6 +15,10 @@ from matplotlib import style
 import os
 import pickle
 from datetime import datetime
+# Added for hyperparameter tuning, evaluation metrics, cross-validation and visualization
+from sklearn.model_selection import GridSearchCV, cross_val_score
+from sklearn.metrics import classification_report, confusion_matrix, roc_curve, auc
+import seaborn as sns
 
 # Set plotting style
 style.use("ggplot")
@@ -88,6 +92,20 @@ def train_model(X, y, kernel="linear", C=1.0):
     clf = svm.SVC(kernel=kernel, C=C)
     clf.fit(X, y)
     return clf
+
+
+def tune_and_train_model(X_train, y_train):
+    """Hyperparameter tuning using GridSearchCV"""
+    param_grid = {
+        'kernel': ['linear','rbf','poly'],
+        'C': [0.1,1,10],
+        'gamma': ['scale','auto']
+    }
+    svc = svm.SVC(probability=True)
+    grid = GridSearchCV(svc, param_grid, cv=5, n_jobs=-1, scoring='accuracy')
+    grid.fit(X_train, y_train)
+    print(f"Best params: {grid.best_params_}, CV score: {grid.best_score_:.4f}")
+    return grid.best_estimator_
 
 
 def save_model(model, filename="../models/stock_model.pkl"):
@@ -164,44 +182,54 @@ def analyze_performance(model, X_test, y_test, Z_test, invest_amount=10000):
     return accuracy, market_return, strategy_return
 
 
-def run_analysis(test_size=2900, save=True):
-    """
-    Run the full analysis pipeline: load data, train model, and evaluate performance.
-    
-    Args:
-        test_size (int): Number of samples to use for testing.
-        save (bool): Whether to save the trained model.
-        
-    Returns:
-        tuple: Accuracy, market return, strategy return, and the trained model.
-    """
-    # Build the dataset
+def evaluate_model(model, X_test, y_test, Z_test, invest_amount=10000):
+    """Extended evaluation: classification report, confusion matrix, ROC curve, returns."""
+    y_pred = model.predict(X_test)
+    y_proba = model.predict_proba(X_test)[:,1]
+    print("\nClassification Report:")
+    print(classification_report(y_test, y_pred))
+    cm = confusion_matrix(y_test, y_pred)
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
+    plt.title("Confusion Matrix")
+    plt.show()
+    fpr, tpr, _ = roc_curve(y_test, y_proba)
+    roc_auc = auc(fpr, tpr)
+    plt.figure()
+    plt.plot(fpr, tpr, label=f"AUC={roc_auc:.2f}")
+    plt.plot([0,1],[0,1],'--', color='gray')
+    plt.xlabel('FPR'); plt.ylabel('TPR')
+    plt.title('ROC Curve'); plt.legend(loc='lower right')
+    plt.show()
+    return analyze_performance(model, X_test, y_test, Z_test, invest_amount)
+
+
+def run_analysis(test_size=2900, save=True, tune=False, cv=5):
+    """Run full pipeline with optional tuning and cross-validation."""
     X, y, Z = build_data_set()
     print(f"Total samples: {len(X)}")
-    
-    # Split data into training and testing sets
     X_train, X_test = X[:-test_size], X[-test_size:]
     y_train, y_test = y[:-test_size], y[-test_size:]
     Z_test = Z[-test_size:]
-    
-    # Train the model
-    clf = train_model(X_train, y_train)
-    
-    # Analyze performance
-    accuracy, market_return, strategy_return = analyze_performance(clf, X_test, y_test, Z_test)
-    
-    # Print results
-    print(f"Accuracy: {accuracy:.2f}%")
-    print(f"Market return: ${market_return:.2f}")
-    print(f"Strategy return: ${strategy_return:.2f}")
-    print(f"Difference: ${strategy_return - market_return:.2f}")
-    
-    # Save the model if requested
-    if save:
-        save_model(clf)
-    
+    # Baseline cross-validation
+    baseline = svm.SVC(kernel='linear')
+    cv_scores = cross_val_score(baseline, X_train, y_train, cv=cv)
+    print(f"Baseline {cv}-fold CV accuracy: {cv_scores.mean():.4f} ± {cv_scores.std():.4f}")
+    # Train or tune
+    clf = tune_and_train_model(X_train, y_train) if tune else train_model(X_train, y_train)
+    # Evaluate
+    accuracy, market_return, strategy_return = evaluate_model(clf, X_test, y_test, Z_test)
+    print(f"Accuracy: {accuracy:.2f}% | Market: ${market_return:.2f} | Strategy: ${strategy_return:.2f}")
+    if save: save_model(clf)
     return accuracy, market_return, strategy_return, clf
 
 
+# CLI support for flexibility
 if __name__ == "__main__":
-    run_analysis()
+    import argparse
+    parser = argparse.ArgumentParser(description="Stock Predictor CLI")
+    parser.add_argument("--test-size", type=int, default=2900)
+    parser.add_argument("--no-save", action="store_true")
+    parser.add_argument("--tune", action="store_true")
+    parser.add_argument("--cv", type=int, default=5)
+    args = parser.parse_args()
+    run_analysis(test_size=args.test_size, save=not args.no_save, tune=args.tune, cv=args.cv)
