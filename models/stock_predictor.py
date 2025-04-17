@@ -9,16 +9,22 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn import svm, preprocessing
-from sklearn.impute import SimpleImputer
+from sklearn.impute import SimpleImputer, KNNImputer
 from sklearn.preprocessing import StandardScaler
 from matplotlib import style
 import os
 import pickle
 from datetime import datetime
 # Added for hyperparameter tuning, evaluation metrics, cross-validation and visualization
-from sklearn.model_selection import GridSearchCV, cross_val_score
+from sklearn.model_selection import GridSearchCV, cross_val_score, StratifiedKFold
 from sklearn.metrics import classification_report, confusion_matrix, roc_curve, auc
 import seaborn as sns
+# Added for feature selection and ensemble models
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, VotingClassifier
+from sklearn.feature_selection import SelectKBest, f_classif, RFE
+from sklearn.utils import resample
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
 
 # Set plotting style
 style.use("ggplot")
@@ -40,12 +46,13 @@ FEATURES = [
 ]
 
 
-def build_data_set(csv_file="../data/key_stats_acc_perf_WITH_NA.csv"):
+def build_data_set(csv_file="data/key_stats_acc_perf_WITH_NA.csv", use_knn_imputer=True):
     """
     Build and preprocess the dataset for model training and testing.
     
     Args:
         csv_file (str): Path to the CSV file containing stock data.
+        use_knn_imputer (bool): Whether to use KNN imputation for better handling of missing values.
         
     Returns:
         tuple: Processed features (X), labels (y), and additional stock/market data (Z).
@@ -53,14 +60,24 @@ def build_data_set(csv_file="../data/key_stats_acc_perf_WITH_NA.csv"):
     # Load the data
     data_df = pd.read_csv(csv_file)
     
-    # Shuffle the data
-    data_df = data_df.sample(frac=1).reset_index(drop=True)
+    # Shuffle the data with fixed random state for reproducibility
+    data_df = data_df.sample(frac=1, random_state=42).reset_index(drop=True)
     
     # Replace string NaNs with np.nan
     data_df = data_df.replace(["NaN", "N/A"], np.nan)
     
-    # Impute NaN values with column mean
-    imputer = SimpleImputer(strategy='mean')
+    # Check class balance
+    status_counts = data_df['Status'].value_counts()
+    print(f"Class distribution: {status_counts}")
+    
+    # Use better imputation strategy for missing values
+    if use_knn_imputer:
+        print("Using KNN imputation for better handling of missing values")
+        imputer = KNNImputer(n_neighbors=5)
+    else:
+        print("Using mean imputation for missing values")
+        imputer = SimpleImputer(strategy='mean')
+    
     X = imputer.fit_transform(data_df[FEATURES])
     
     # Assign labels: 0 for underperformed, 1 for outperformed
@@ -95,17 +112,89 @@ def train_model(X, y, kernel="linear", C=1.0):
 
 
 def tune_and_train_model(X_train, y_train):
-    """Hyperparameter tuning using GridSearchCV"""
+    """
+    Enhanced hyperparameter tuning using GridSearchCV with more comprehensive options.
+    
+    Args:
+        X_train: Training feature matrix
+        y_train: Training labels
+        
+    Returns:
+        The best model found during hyperparameter tuning
+    """
+    print("Performing advanced hyperparameter tuning...")
     param_grid = {
-        'kernel': ['linear','rbf','poly'],
-        'C': [0.1,1,10],
-        'gamma': ['scale','auto']
+        'kernel': ['linear', 'rbf', 'poly'],
+        'C': [0.1, 1.0, 10.0, 100.0],
+        'gamma': ['scale', 'auto', 0.01, 0.1],
+        'class_weight': [None, 'balanced']
     }
-    svc = svm.SVC(probability=True)
-    grid = GridSearchCV(svc, param_grid, cv=5, n_jobs=-1, scoring='accuracy')
+    
+    # Use stratified k-fold to ensure each fold has same class distribution
+    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+    
+    # Initialize the model with probability estimates for later use
+    svc = svm.SVC(probability=True, random_state=42)
+    
+    # Set up grid search with parallel processing
+    grid = GridSearchCV(
+        estimator=svc,
+        param_grid=param_grid,
+        cv=cv,
+        n_jobs=-1,
+        scoring='accuracy',
+        verbose=1
+    )
+    
+    # Find best parameters
     grid.fit(X_train, y_train)
-    print(f"Best params: {grid.best_params_}, CV score: {grid.best_score_:.4f}")
+    
+    print(f"Best parameters: {grid.best_params_}")
+    print(f"Best cross-validation score: {grid.best_score_:.4f}")
+    
     return grid.best_estimator_
+
+
+def train_ensemble_model(X_train, y_train):
+    """
+    Train an ensemble of models for better predictive performance.
+    
+    Args:
+        X_train: Training feature matrix
+        y_train: Training labels
+        
+    Returns:
+        Trained ensemble model
+    """
+    print("Training ensemble model for improved accuracy...")
+    
+    # Train individual models
+    # SVM model
+    svm_model = svm.SVC(probability=True, kernel='linear', class_weight='balanced', random_state=42)
+    svm_model.fit(X_train, y_train)
+    
+    # Random Forest model
+    rf_model = RandomForestClassifier(n_estimators=100, class_weight='balanced', random_state=42)
+    rf_model.fit(X_train, y_train)
+    
+    # Gradient Boosting model
+    gb_model = GradientBoostingClassifier(n_estimators=100, random_state=42)
+    gb_model.fit(X_train, y_train)
+    
+    # Create a voting classifier that combines all models
+    ensemble = VotingClassifier(
+        estimators=[
+            ('svm', svm_model),
+            ('rf', rf_model),
+            ('gb', gb_model)
+        ],
+        voting='soft'  # Use probability estimates for voting
+    )
+    
+    # Train the ensemble
+    ensemble.fit(X_train, y_train)
+    
+    return ensemble
 
 
 def save_model(model, filename="../models/stock_model.pkl"):
@@ -159,16 +248,18 @@ def analyze_performance(model, X_test, y_test, Z_test, invest_amount=10000):
     for x in range(test_size):
         prediction = model.predict(X_test[x].reshape(1, -1))[0]
         
-        # Check if prediction matches the actual label
+        # Track correct classifications
         if prediction == y_test[x]:
             correct_count += 1
         
-        # If the prediction is 1 (outperformed), calculate returns
+        # Calculate returns only when model predicts outperformance and data is valid
         if prediction == 1:
-            total_invests += 1
             stock_change = Z_test[x][0] / 100  # Convert percentage to decimal
             sp500_change = Z_test[x][1] / 100  # Convert percentage to decimal
-            
+            # Skip if change values are missing
+            if np.isnan(stock_change) or np.isnan(sp500_change):
+                continue
+            total_invests += 1
             if_market += invest_amount * sp500_change
             if_strat += invest_amount * stock_change
     
@@ -203,24 +294,96 @@ def evaluate_model(model, X_test, y_test, Z_test, invest_amount=10000):
     return analyze_performance(model, X_test, y_test, Z_test, invest_amount)
 
 
-def run_analysis(test_size=2900, save=True, tune=False, cv=5):
-    """Run full pipeline with optional tuning and cross-validation."""
-    X, y, Z = build_data_set()
+def run_analysis(test_size=2900, save=True, tune=True, use_ensemble=True, 
+               use_knn_imputer=True, use_feature_selection=True, feature_count=20, cv=5):
+    """
+    Run full pipeline with all accuracy improvements.
+    
+    Args:
+        test_size: Number of samples for testing
+        save: Whether to save the final model
+        tune: Whether to tune hyperparameters
+        use_ensemble: Whether to use ensemble model instead of single SVM
+        use_knn_imputer: Whether to use KNN imputation for missing values
+        use_feature_selection: Whether to select most important features
+        feature_count: Number of features to select if using feature selection
+        cv: Number of cross-validation folds
+        
+    Returns:
+        tuple: accuracy, market_return, strategy_return, and the trained model
+    """
+    # Build dataset with improved preprocessing
+    X, y, Z = build_data_set(use_knn_imputer=use_knn_imputer)
     print(f"Total samples: {len(X)}")
+    
+    # Split data
     X_train, X_test = X[:-test_size], X[-test_size:]
     y_train, y_test = y[:-test_size], y[-test_size:]
     Z_test = Z[-test_size:]
+    
+    # Apply feature selection if requested
+    if use_feature_selection:
+        X_train, X_test = select_features(X_train, y_train, X_test, k=feature_count)
+    
     # Baseline cross-validation
     baseline = svm.SVC(kernel='linear')
     cv_scores = cross_val_score(baseline, X_train, y_train, cv=cv)
     print(f"Baseline {cv}-fold CV accuracy: {cv_scores.mean():.4f} ± {cv_scores.std():.4f}")
-    # Train or tune
-    clf = tune_and_train_model(X_train, y_train) if tune else train_model(X_train, y_train)
+    
+    # Train model based on chosen approach
+    if use_ensemble:
+        print("Using ensemble model for better accuracy")
+        if tune:
+            # First tune SVM as part of process
+            _ = tune_and_train_model(X_train, y_train)
+        clf = train_ensemble_model(X_train, y_train)
+    else:
+        # Use single SVM model with or without tuning
+        clf = tune_and_train_model(X_train, y_train) if tune else train_model(X_train, y_train)
+    
     # Evaluate
     accuracy, market_return, strategy_return = evaluate_model(clf, X_test, y_test, Z_test)
     print(f"Accuracy: {accuracy:.2f}% | Market: ${market_return:.2f} | Strategy: ${strategy_return:.2f}")
-    if save: save_model(clf)
+    
+    if save: 
+        save_model(clf)
+    
     return accuracy, market_return, strategy_return, clf
+
+
+def select_features(X_train, y_train, X_test, k=20, method='selectk'):
+    """
+    Select the most important features for prediction.
+    
+    Args:
+        X_train: Training feature matrix
+        y_train: Training labels
+        X_test: Test feature matrix
+        k: Number of features to select
+        method: Feature selection method ('selectk' or 'rfe')
+    
+    Returns:
+        Tuple of (selected X_train, selected X_test)
+    """
+    print(f"Performing feature selection using {method}, selecting top {k} features...")
+    
+    if method == 'selectk':
+        # Select K best features based on ANOVA F-value
+        selector = SelectKBest(f_classif, k=k)
+        X_train_selected = selector.fit_transform(X_train, y_train)
+        X_test_selected = selector.transform(X_test)
+        
+    elif method == 'rfe':
+        # Recursive Feature Elimination with Random Forest
+        estimator = RandomForestClassifier(random_state=42)
+        selector = RFE(estimator, n_features_to_select=k, step=1)
+        X_train_selected = selector.fit_transform(X_train, y_train)
+        X_test_selected = selector.transform(X_test)
+        
+    else:
+        raise ValueError(f"Unknown feature selection method: {method}")
+    
+    return X_train_selected, X_test_selected
 
 
 # CLI support for flexibility
